@@ -19,4 +19,7 @@ function openPage(url){
 	
 };
 
-
+function showTab(i){
+	$('.inner_content>div').slideUp();
+	$('.inner_content #in'+i).slideDown();
+}
