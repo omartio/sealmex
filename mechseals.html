@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <style>
-thumbnail img{
-	width: 180px;
+.accordion-heading img{
+	height: 50px;
+	margin-right: 30px;
+}
+
+.accordion-heading {
+	font-size: large;
 }
 
 .inner_content>div{
@@ -11,30 +16,27 @@ thumbnail img{
 .table td {
 	height: 50px;
 }
+
+.accordion-inner {
+	padding-left: 100px;
+}
+
 </style>
+
+<script src="js/bootstrap.min.js"></script>
 
 <div class='row-fluid'>
 	<div class = 'span12'>
-	<ul class = 'thumbnails'>
-		<li class="thumbnail">
-			<a href="#" onclick="showTab(1);">
-			<img src="pics/rubber bellows.jpg" class="img-rounded" alt="Торцовые уплотнения с резиновым сильфоном">	
-			<h5>С резиновым сильфоном</h5></a>		
-		</li>
-		<li class="thumbnail offset1">
-			<a href="#" onclick="showTab(2);">
-			<img src="pics/conical spring.jpg" alt="Торцовые уплотнения с конической пружиной" class="img-rounded">	
-			<h5>С конической пружиной</h5></a>		
-		</li>
-		<li class="thumbnail offset1">
-			<a href="#" onclick="showTab(3);">
-			<img src="pics/multispring.jpg" alt="Торцовые уплотнения в обойме" class="img-rounded" >	
-			<h5>В обойме</h5></a>
-		</li>
-	</ul>
-	<div class='inner_content span11'>
-		<div id='in1'>
-		<table class='table'>
+	<div class="accordion" id="accordion2">
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a font-size='20pt' class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse1">
+				<img src="pics/rubber bellows.jpg" class="img-rounded" alt="Торцовые уплотнения с резиновым сильфоном">	
+				С резиновым сильфоном</a>		
+			</div>
+			<div id="collapse1" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table class='table'>
         <tr>
           <td ><img src="pics/NM-1 small.jpg" alt="торцевые уплотнения NM-1" title="торцевые уплотнения NM-1"  /></td>
           <td  ><div align="left"><strong>NM-1 / NM-12 / NM-13</strong><span class="style14"><strong><br />
@@ -127,9 +129,19 @@ thumbnail img{
           </div></td>
         </tr>
         </table>
+				</div>
+			</div>
 		</div>
-		<div id='in2'>
-		<table  border="0" cellspacing="15">
+		
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
+				<img src="pics/conical spring.jpg" alt="Торцовые уплотнения с конической пружиной" class="img-rounded">	
+				С конической пружиной</a>		
+			</div>
+			<div id="collapse2" class="accordion-body collapse">
+				<div class="accordion-inner">
+					<table  class='table'>
         <tr>
           <td><img src="pics/NS-1 small.jpg" alt="Торцевые уплотнения NS-1" title="Торцевые уплотнения NS-1"  /></td>
           <td ><div align="left"><strong>NS-1 / NS-DN </strong><span class="style14"><strong><br />
@@ -203,24 +215,56 @@ thumbnail img{
           </div></td>
         </tr>
         
-        </table></div>
-	</div>
-	<ul class = 'thumbnails'>
-		<li class="thumbnail">
-			<a href="#" onclick="showTab(4);">
-			<img src="pics/metal bellows.jpg" alt="Торцовые уплотнения с металлическим сильфоном" class="img-rounded" >	
-			<center><h6>C металлическим сильфоном</h6></a></center>
-		</li>
-		<li class="thumbnail offset1">
-			<a href="#" onclick="showTab(5);">
-			<img src="pics/outer.jpg" alt="Внешние торцовые уплотнения" class="img-rounded" >	
-			<center><h5>Внешнего расположения</h5></a></center>
-		</li>
-		<li class="thumbnail offset1">
-			<a href="#" onclick="showTab(6);">
-			<img src="pics/cartridge.jpg" alt="Картриджные" class="img-rounded" >	
-			<center> <h5>В обойме</h5></a></center>
-		</li>
-	</ul>
+        </table>
+				</div>
+			</div>
+		</div>
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse3">
+				<img src="pics/multispring.jpg" alt="Торцовые уплотнения в обойме" class="img-rounded" >	
+				В обойме</a>
+			</div>
+			<div id="collapse3" class="accordion-body collapse">
+				<div class="accordion-inner">
+					fff
+				</div>
+			</div>
+		</div>		
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
+				<img src="pics/metal bellows.jpg" alt="Торцовые уплотнения с металлическим сильфоном" class="img-rounded" >	
+				C металлическим сильфоном</a>
+			</div>
+			<div id="collapse4" class="accordion-body collapse">
+				<div class="accordion-inner">
+				</div>
+			</div>
+		</div>
+			
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
+				<img src="pics/outer.jpg" alt="Внешние торцовые уплотнения" class="img-rounded" >	
+				Внешнего расположения</a>
+			</div>
+			<div id="collapse5" class="accordion-body collapse">
+				<div class="accordion-inner">
+				</div>
+			</div>
+
+		</div>
+		<div class="accordion-group">
+			<div class="accordion-heading">
+				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
+				<img src="pics/cartridge.jpg" alt="Картриджные" class="img-rounded" >	
+				В обойме</a>
+			</div>
+			<div id="collapse6" class="accordion-body collapse">
+				<div class="accordion-inner">
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
