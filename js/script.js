@@ -19,7 +19,11 @@ function openPage(url){
 	
 };
 
-function showTab(i){
-	$('.inner_content>div').slideUp();
-	$('.inner_content #in'+i).slideDown();
-}
+function showTab(i, t){
+	$('.inner_content>div').slideUp().promise().done(function(){
+		$('.inner_content #in'+i).slideDown();
+		});
+	//$('.inner_content #in'+i).slideDown({queue: true});
+	//$('li .well').removeClass('well');
+	//$('.thumbnails > li :eq('+(i-1)+')').addClass('well');
+	}
